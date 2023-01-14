@@ -1,24 +1,7 @@
 import streamlit
-from joblib import dump, load
-import torch
-import joblib
-from sklearn.linear_model import LogisticRegression
-
-
-
-# Save the trained model to a file
-joblib.dump(model, 'trained_model.pkl')
-
-# Load the trained model from a file
-model = joblib.load('trained_model.pkl')
-
-# Use the model to make predictions
-predictions = model.predict(X_test)
 import streamlit as st
 import joblib
 
-# Load the trained model
-model = joblib.load('trained_model.pkl')
 
 def predict_lung_cancer(age, gender, smoking, alcohol_use, occupational_hazards, chest_pain, snoring, chronic_lung_disease, obesity, coughing_of_blood, shortness_of_breath, wheezing, frequent_cold):
     """Takes user input and returns a prediction of lung cancer risk."""
